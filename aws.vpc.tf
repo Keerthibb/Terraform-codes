@@ -56,15 +56,7 @@ resource "aws_security_group" "sgp" {
     to_port     = 22
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
-  }
-
-  ingress {
-    description = "My IP"
-    from_port   = 0
-    to_port     = 0
-    protocol    = "icmp"
-    cidr_blocks = ["192.168.56.1/32"]
-  }
+ }
 
 egress {
   from_port   = 0
